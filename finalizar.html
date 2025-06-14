@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Finalizar Compra - Bom aproveito😁</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #f4f6f9;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: #ffe600;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .checkout-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .checkout-container p {
+      color: #666666;
+      margin-bottom: 30px;
+    }
+
+    .pagamento-form label {
+      display: block;
+      background-color: #f1f1f1;
+      margin-bottom: 12px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: left;
+    }
+
+    .pagamento-form input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .pagamento-form label:hover {
+      background-color: #e6e6e6;
+    }
+
+    .pagamento-form button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .pagamento-form button:hover {
+      background-color: #218838;
+    }
+
+    /* Mensagem inicialmente escondida e preparada para slide */
+    .mensagem-sucesso {
+      max-height: 0;
+      overflow: hidden;
+      color: #28a745;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 0;
+      opacity: 0;
+      transition: max-height 0.6s ease, opacity 0.6s ease, margin-top 0.6s ease;
+    }
+
+    /* Classe para mostrar mensagem deslizando */
+    .mensagem-sucesso.show {
+      max-height: 100px; /* altura suficiente para o texto */
+      margin-top: 30px;
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .checkout-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">💻Roat's GS 🖱</div>
+  </header>
+
+  <main class="checkout-container">
+    <h2>Finalizar Compra</h2>
+    <p>Escolha o método de pagamento:</p>
+
+    <form class="pagamento-form" id="form-pagamento">
+      <label>
+        <input type="radio" name="pagamento" value="cartao" required>
+        💳 Cartão de Crédito
+      </label>
+      <label>
+        <input type="radio" name="pagamento" value="boleto">
+        🧾 Boleto Bancário
+      </label>
+      <label>
+        <input type="radio" name="pagamento" value="pix">
+        📱 PIX
+      </label>
+
+      <button type="submit">Confirmar Pedido</button>
+    </form>
+
+    <div id="mensagem-sucesso" class="mensagem-sucesso">
+      ✅ Pagamento confirmado! Aproveite sua compra😁🖐
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('form-pagamento');
+    const mensagem = document.getElementById('mensagem-sucesso');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // evita recarregar a página
+
+      // Esconde o formulário
+      form.style.display = 'none';
+
+      // Adiciona a classe que faz a mensagem deslizar
+      mensagem.classList.add('show');
+    });
+  </script>
+</body>
+</html>

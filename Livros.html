@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Livraria do Saber</title>
+  <link rel="icon" href="pikachu.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">💻Roat's game shop</div>
+  </header>
+
+  <!-- BANNER DE ENTRADA -->
+  <section class="banner">
+    <h1>Ola bem vindo a roat's game shop💻</h1>
+    <p>😁🖐Ola e seja bem vindo aqui na roat's shop temos jogos,peças de computador e video games</p>
+  </section>
+
+  <main>
+    <div class="products">
+       
+    <div  class="product"><img scr="capsule_616x353.jpg" alt = "product"><h3>watch dogs 2</h3><p>R$ 150,00</p><button onclick="addToCart('Watch dogs', 150)">Adicionar</button></div>
+
+      <div class="product"><h3>memoria ram ddr4 kingston fury 8 gb 3200 MHZ</h3><p>R$ 135,00</p><button onclick="addToCart('Memoria ddr4', 135)">Adicionar</button></div>
+
+      <div class="product"><h3>half life</h3><p>R$ 20,00</p><button onclick="addToCart('HL1', 20)">Adicionar</button></div>
+
+      <div class="product"><h3>half life 2</h3><p>R$ 30,00</p><button onclick="addToCart('hL2', 30)">Adicionar</button></div>
+
+      <div class="product"><h3>storm works</h3><p>R$ 40,00</p><button onclick="addToCart('SW', 40)">Adicionar</button></div>
+
+      <div class="product"><h3>Placa mae a520m-am MSI ddr4</h3><p>R$ 175,00</p><button onclick="addToCart('Placam a5', 175)">Adicionar</button></div>
+
+      <div class="product"><h3>BOMB RUSH CYBERFUNK</h3><p>R$ 100,75</p><button onclick="addToCart('BRCF', 100)">Adicionar</button></div>
+
+      <div class="product"><h3>HALF LIFE OPPOSSING FORCE</h3><p>R$ 25,00</p><button onclick="addToCart('HLF OPSF', 25)">Adicionar</button></div>
+
+      <div class="product"><h3>HALF LIFE BLUE SHIFT</h3><p>R$ 25,00</p><button onclick="addToCart('HLBS', 25)">Adicionar</button></div>
+
+      <div class="product"><h3>Nintend switch 2</h3><p>R$ 4500,00</p><button onclick="addToCart('NS2', 175)">Adicionar</button></div>
+
+      <div class="product"><h3>RG XBOX ALLY[pre-venda]</h3><p>R$ 7000,00</p><button onclick="addToCart('XBXR', 175)">Adicionar</button></div>
+
+      <div class="product"><h3>RTX 4060 GALAX 8GB</h3><p>R$ 2600,00</p><button onclick="addToCart('RTX4060', 175)">Adicionar</button></div>
+
+      <div class="product"><h3>RX 6600 XT ASROCK 8GB</h3><p>R$ 1750,00</p><button onclick="addToCart('RX66XT', 175)">Adicionar</button></div>
+
+      <div class="product"><h3>RTX5090 AORUS GIGABYTE 32 GB</h3><p>R$ 20000</p><button onclick="addToCart('RTX5090', 175)">Adicionar</button></div>
+
+      <div class="product"><h3>Placa mae msi b450m PRO-WIFI</h3><p>R$ 475,25</p><button onclick="addToCart('Gabinetedk100', 175)">Adicionar</button></div>
+
+
+    </div>
+  </main>
+
+  <!-- ÍCONE DO CARRINHO -->
+  <div class="floating-cart" id="cart-icon" onclick="toggleCart()">
+    🛒
+    <span class="cart-count" id="cart-count">0</span>
+  </div>
+
+  <!-- PAINEL DO CARRINHO -->
+  <div class="cart-panel" id="cart-panel">
+    <h3>🛒 Seu Carrinho</h3>
+    <div class="cart-items" id="cart-items">
+      <p>O carrinho está vazio.</p>
+    </div>
+    <div class="cart-buttons">
+      <button class="continue-btn" onclick="toggleCart()">Continuar Comprando</button>
+      <button class="checkout-btn" onclick="window.location.href='finalizar.html'">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
